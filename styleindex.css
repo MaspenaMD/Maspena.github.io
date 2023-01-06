@@ -1,0 +1,242 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'poppins',sans-serif;
+}
+#top-main{
+  background: url(img/Picsart_22-12-25_15-14-34-345.jpg);
+  background-size: contain;
+  background-position: center;
+}
+a{text-decoration: none;}
+/*navigasi*/
+nav{
+  padding: 3px;
+  background-color: rgba(6, 51, 1, 0.61);
+}
+marquee{
+  font-size: 20px;
+  margin: 0;
+  margin-left: 53px;
+  background-color: rgb(177, 98, 98);
+  border-top-left-radius: 60px;
+  border-bottom-left-radius: 60px;
+}
+.pf{
+  background-image: url(img/IMG_20211203_002612.JPG); background-size: cover; border-style:inset;
+  width: 50px; height: 50px;
+  float: left;
+  margin: 7px 0 0 7px;
+  cursor: pointer;
+  position: absolute;
+  border: none;
+  border-radius: 50%;
+}
+.pf:hover{
+  width: 47px; height: 47px;
+  margin: 8.4px;
+}
+.dropdown-content {
+  background-image: url(img/maspenalogo.png);
+  background-size: cover;
+  text-align: center;
+  color: wheat;
+  display: none;
+  position:absolute;
+  left: 9px;
+  top: 70px;
+  width: 185px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.MSD{
+  width: 50px;
+  margin: 15px;
+  border-radius: 50%;
+}  
+.show {
+  display: block;
+}
+h1{
+  margin: 0;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 750;
+  color: aliceblue;
+  
+  text-transform: uppercase;}
+/*Main*/
+.main{
+  background-position: center ;
+  color: rgb(255, 145, 0);
+  text-align: center;
+  padding-bottom: 15px;
+  font-size: 18px;
+  line-height: 25px;
+  font-family: 'work sans',sans-serif;
+}
+#profile{
+  width: 190px;
+  padding-top: 1em;
+}
+h2{
+  margin: 0 0 15px 0;
+  font-size: 25px;
+  font-weight: 790;
+  
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+.mobile{display: none;}
+.desktop{display: block;}
+.main_prgrph{
+  margin:0 99px 0 99px;
+} 
+.more{
+  display: none;
+}
+
+.main:not(:last-child){
+  margin-bottom: 30px;
+}
+.read1,.read{
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  margin: 9px;
+  text-transform: capitalize;
+  cursor: pointer;
+  font-size: 20px;
+  background: red;
+  border-radius: 50px;
+}
+.read1:hover,.read:hover{
+  background: rgb(197, 1, 1);
+}
+/*Section*/
+section {background-color: #f5d2b2b6; text-align: center;  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+section h2{padding: 0.2em;}
+.project{display: flex; justify-content:space-evenly}
+.project .content_prjct{padding-bottom: 1em; width: 50%; border-right: 1px solid black; margin: 0;}
+.project .content_prjct h3{text-transform: capitalize; margin: 0;}
+.project .content_prjct span{display:flex; justify-content:space-evenly;  }
+.project .content_prjct span a{color: black;}
+.project .content_prjct span a p{margin: 0; font-weight: 600; }
+.project .content_prjct span a p br{display: none;}
+
+.project .content_prjct span a:hover #ab{color: red;}
+.project .content_prjct span a:hover #cv{color: yellow;}
+.project .content_prjct span a:hover #nvl{color: green;}
+
+.other a:hover i {color: rgb(8, 27, 201);}
+
+.project .content_prjct span a i, footer span a i{font-size: 5em;}
+/*Footer*/
+footer{background-color: rgb(9, 7, 37);  text-align: center; color: white;margin: 0; padding: 1em 0 1em 0;}
+footer span{display: flex; justify-content:space-evenly; flex-direction: row;}
+footer span a{color: white; margin:0 1em 0 1em;}
+footer span a p{margin: 4px; font-size: 12px; font: 1em bold sans-serif; text-transform: uppercase;}
+
+footer span a:hover #wa{color: #25d366;}
+footer span a:hover #fb1,  #fb2{display: none;}
+footer span a:hover #fb2{display: inline;}
+footer span a:hover #ig {color: rgb(228, 64, 59);}
+
+@media(max-width:720px){
+/*navbar dan main*/
+.pf{width: 47px; height: 47px;}
+.pf:hover{width: 45px; height: 45px;}
+  h1{font-size: 30px;}
+  marquee{font-size: 17px;}
+  nav{font-size: 18px;}
+  #profile{width: 150px;}
+  .main .mobile p{font-size: 17px;}
+  .read1{font-size: 17px;}
+  /*popup modal*/
+  .popup{
+      text-align: left;
+      position: fixed;
+      left: 50%;
+      background: #fff;
+      border-radius: 15px;
+      width: 80%;
+      height: 90%;
+      opacity: 0;
+      overflow:scroll;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      pointer-events: none;
+      box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+      transform: translate(-50%, -50%) scale(1.2);
+      transition: top 0s 0.2s ease-in-out,
+                  opacity 0.2s 0s ease-in-out,
+                  transform 0.2s 0s ease-in-out;
+    }
+    .popup.show{
+      padding: 25px;
+      top: 50%;
+      opacity: 1;
+      pointer-events: auto;
+      transform:translate(-50%, -50%) scale(1);
+      transition: top 0s 0s ease-in-out,
+                  opacity 0.2s 0s ease-in-out,
+                  transform 0.2s 0s ease-in-out;
+    
+    }
+    .popup header{
+      padding-bottom: 15px;
+      border-bottom: 1px solid #ebedf9;
+    }
+    header span{
+      font-size: 21px;
+      font-weight: 600;
+    }
+    header .close{
+      float: right;
+      display: flex;
+      align-items: center;
+      border-radius: 50%;
+      justify-content: center;
+      transition: all 0.3s ease-in-out;      
+      color: red;
+      font-size: 17px;
+      background: #f2f3fb;
+      height: 33px;
+      width: 33px;
+      cursor: pointer;
+    }
+    header .close:hover{
+      background: #ebedf9;
+    }
+    .popup .content{
+      margin: 20px 0;
+    }
+    .content .logo{
+        text-align: center;
+        background: url(img/Picsart_22-12-25_15-14-34-345.jpg);
+        background-size: cover;
+    }
+    .content p{
+      font-size: 16px;
+    }      
+    .popup .back{
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      margin: 9px;
+      text-transform: capitalize;
+      cursor: pointer;
+      font-size: 17px;
+      background: red;
+      border-radius: 50px; 
+    }
+  .mobile{display: block; margin:0 29px 0 29px;} .desktop{display: none;}
+  .project .content_prjct span a p br{display: block;}
+/*section*/
+  .project{display: inline; }
+  .project .content_prjct{width: 100%; border-bottom: 1px solid black; border-right: none;}
+  .project .content_prjct span a i, footer span a i{font-size: 3em;}
+  footer span a p{font-size: 13px;}
+  footer p{font-size: 13px;}
+}

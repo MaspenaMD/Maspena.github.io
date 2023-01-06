@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="styleindex.css">
+</head>
+<body>
+    <div id="top-main">
+        <nav>
+            <div>         
+            <button class="pf" onclick="myFunction()" ></button>
+                <div class="dropdown-content" id="myDropdown">
+                    <img class="MSD"  src="img/IMG_20211203_002612.JPG" alt="MASDONO_Logo">
+                    <p style="background-color: rgba(0, 0, 0, 0.74); font-size: 15px;">Hanya seorang anak biasa yang tak punya nama belakang</p>
+                </div>
+            </div> 
+            <h1>maspena</h1>
+            <marquee>Selamat datang - Ketahui tentang Masdono di web ini!</marquee>
+        </nav>
+        <main>
+        `   <div class="main">
+                <img id="profile" src="img/MasPenaProfil121133.png" alt="Logo_MASPENA">
+                <h2>taman khayalan</h2>
+                <div class="mobile">
+                    <p id="prt1"></p>
+                    <button class="read1">baca selengkapnya</button>
+                    <div class="popup">
+                        <header>
+                          <span>Baca selengkapnya</span>
+                          <div class="close"><i class="fa fa-close"></i></div>
+                        </header>
+                        <div class="content">
+                          <div class="logo">
+                            <img id="profile" src="img/MasPenaProfil121133.png" alt="Logo_MASPENA">
+                            <h2>taman khayalan</h2>
+                          </div>
+                          <p id="prt2"></p>
+                              <button class="back">kembalikan</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="desktop">
+                    <p class="main_prgrph"><span id="prt1.2"></span>
+                    <span class="dots">... <br></span>
+                    <span class="more"></span>
+                    <button class="read">baca selengkapnya</button></p>
+                </div>
+            </div>
+        </main>
+    </div>
+<script src="script.js"></script>
+<script>
+$(document).ready(function(){
+    $('.read').click(function(){
+        $(this).prev().toggle();
+        $(this).siblings('.dots').toggle();
+        if($(this).text()=='baca selengkapnya'){
+            $(this).text('kembalikan');
+        }
+        else{
+            $(this).text('baca selengkapnya');
+        }
+    });
+});
+
+</script>
+    <section>
+        <h2 style="border-bottom: 2px solid black; margin: 0;">my project</h2>
+        <div class="project">
+            <div class="content_prjct"><h3>My Story</h3>
+                <span>
+                    <a href="#" onclick="klik()">
+                        <i class="fa fa-id-badge" id="ab"></i>
+                        <p>Auto<br>Biografi</p>
+                    </a>
+                    <a href="#" onclick="klik()">
+                        <i class="fa fa-id-card" id="cv"></i>
+                        <p>CV</p>
+                    </a>
+                    <a href="#" onclick="klik()">
+                        <i class="fa fa-book-open" id="nvl"></i>
+                        <p>Novel</p>
+                    </a>
+                </span>
+            </div>
+            <div class="content_prjct"><h3>project Lainnya</h3>
+                <span class="other">
+                    <a href="#" onclick="klik()">
+                        <i class="fa fa-forward"></i>
+                        <p>Lainnya</p>
+                    </a>  
+                </span>  
+            </div>
+        </div>
+    </section>
+    <footer>  
+        <h2>Contact Me</h2>
+        <span>
+            <a href="https://wa.me/6281517438675?text=Hai%20Mas,%0APerkenalkan%20nama%20saya:%0AAskot/dari:%0ASalam%20kenal!%0AAda%20perlu:">
+            <i class="fab fa-whatsapp" id="wa"></i>
+                <p>Whatsapp</p>
+            </a>    
+            <a href="https://facebook.com/dede.mustika.771/" class="fb">
+                <i class="fab fa-facebook" id="fb1"></i>
+                <i class="fab fa-facebook-square" id="fb2"></i>
+                <p>Facebook</p>
+            </a>    
+            <a href="https://www.instagram.com/maspena_/">
+            <i class="fab fa-instagram" id="ig"></i>
+                <p>Instagram</p>
+            </a>   
+        </span>
+        <p>copyright: &copy;MASPENA 2022</p>
+    </footer>
+</body>
+</html>
